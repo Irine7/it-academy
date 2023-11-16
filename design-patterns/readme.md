@@ -26,9 +26,10 @@ If, when implementing MVC, we violate the above-described separation of componen
 ### A simple example based on an app TODO LIST (sprint 1-1)
 
 ## Model
+
+```typescript
 _TodoModel.ts:_
 
-```
 export interface Todo {
 	id: number;
 	title: string;
@@ -76,9 +77,10 @@ newArrTask.addTask(newTask);
 ```
 
 ## View
+
+```typescript
 _TodoView.ts:_
 
-```
 import { TaskList, Todo, Task } from '../todo/index.js';
 
 const input: HTMLInputElement | null = document.querySelector('.task-input');
@@ -120,9 +122,10 @@ button?.addEventListener('click', () => {
 ```
 
 ## Controller
+
+```typescript
 _TodoController.ts:_
 
-```
 export class Task implements Todo {
 	id: number;
 	title: string;
