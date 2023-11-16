@@ -129,6 +129,4 @@ export class Task implements Todo {
 		this.completed = completed;
 	}
 }
-
-const newTask = new Task(1, 'New Task', false);
-`
+const newTask = new Task(1, 'New Task', false)`
