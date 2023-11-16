@@ -27,7 +27,8 @@ If, when implementing MVC, we violate the above-described separation of componen
 
 ## Model
 _TodoModel.ts:_
-`
+
+```
 export interface Todo {
 	id: number;
 	title: string;
@@ -72,10 +73,12 @@ export class TaskList {
 
 const newArrTask = new TaskList();
 newArrTask.addTask(newTask);
-`
+```
+
 ## View
 _TodoView.ts:_
-`
+
+```
 import { TaskList, Todo, Task } from '../todo/index.js';
 
 const input: HTMLInputElement | null = document.querySelector('.task-input');
@@ -114,11 +117,12 @@ button?.addEventListener('click', () => {
 	input.value = '';
 	list?.appendChild(li);
 });
-`
+```
 
 ## Controller
 _TodoController.ts:_
-`
+
+```
 export class Task implements Todo {
 	id: number;
 	title: string;
@@ -129,4 +133,5 @@ export class Task implements Todo {
 		this.completed = completed;
 	}
 }
-const newTask = new Task(1, 'New Task', false)`
+const newTask = new Task(1, 'New Task', false);
+```
