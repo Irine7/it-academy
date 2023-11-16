@@ -28,7 +28,7 @@ If, when implementing MVC, we violate the above-described separation of componen
 ## Model
 
 ```typescript
-_TodoModel.ts:_
+TodoModel.ts:
 
 export interface Todo {
 	id: number;
@@ -79,7 +79,7 @@ newArrTask.addTask(newTask);
 ## View
 
 ```typescript
-_TodoView.ts:_
+TodoView.ts:
 
 import { TaskList, Todo, Task } from '../todo/index.js';
 
@@ -124,7 +124,7 @@ button?.addEventListener('click', () => {
 ## Controller
 
 ```typescript
-_TodoController.ts:_
+TodoController.ts:
 
 export class Task implements Todo {
 	id: number;
