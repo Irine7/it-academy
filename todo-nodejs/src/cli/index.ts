@@ -70,9 +70,9 @@ async function getTasks() {
 	console.log(tasks);
 	tasks.forEach((task) => {
 		console.log(`
-            Task: ${task.title}
-            Completed: ${task.completed ? 'Yes' : 'No'}
-        `);
+			Task: ${task.title}
+			Completed: ${task.completed ? 'Yes' : 'No'}
+			`);
 	});
 }
 
