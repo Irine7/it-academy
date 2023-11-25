@@ -1,4 +1,4 @@
-import { standardText, debounceText } from '../main.js'
+import { standardText, debounceText } from '../index.js';
 
 const updateStandardText = (text) => {
 	standardText.textContent = text;

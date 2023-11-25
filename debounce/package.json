@@ -1,0 +1,29 @@
+{
+	"name": "debounce",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc --build tsconfig.json && npm run copy-css",
+		"build:watch": "tsc --build tsconfig.json --watch",
+		"copy-css": "cp src/front/*.css dist/front",
+		"test": "jest --coverage",
+		"dev": "npx nodemon",
+		"lint": "npx eslint ./src",
+		"format": "npx eslint ./src --fix"
+	},
+	"keywords": [],
+	"author": "Irine7",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.10.0",
+		"@typescript-eslint/eslint-plugin": "^6.12.0",
+		"@typescript-eslint/parser": "^6.12.0",
+		"eslint": "^8.54.0",
+		"nodemon": "^3.0.1",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.3.2"
+	}
+}
