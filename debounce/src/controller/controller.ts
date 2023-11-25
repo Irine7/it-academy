@@ -25,8 +25,8 @@ const debounceHandler = debounce(async (text: string) => {
 }, 500);
 
 export const handleInput = (e: Event) => {
-	if(e.target instanceof HTMLInputElement) {
-		const inputValue = e.target.value
+	if (e.target instanceof HTMLInputElement) {
+		const inputValue = e.target.value;
 		updateStandardText(inputValue);
 		debounceHandler(inputValue);
 	}
