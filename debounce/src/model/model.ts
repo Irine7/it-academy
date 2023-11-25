@@ -1,5 +1,5 @@
-export const fetchData = async (text) => {
-	return new Promise((resolve) => {
+export const fetchData = async (text: string) => {
+	return new Promise<string>((resolve) => {
 		setTimeout(() => {
 			resolve(`${text}`);
 			console.log(`Async text: ${text}`);

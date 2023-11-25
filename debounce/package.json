@@ -5,9 +5,9 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"build": "tsc --build tsconfig.json && npm run copy-css",
-		"build:watch": "tsc --build tsconfig.json --watch",
-		"copy-css": "cp src/front/*.css dist/front",
+		"build": "npm run clean && tsc --build tsconfig.json && npm run copy-assets",
+		"clean": "rimraf dist",
+		"copy-assets": "cp -r public/* dist/",
 		"test": "jest --coverage",
 		"dev": "npx nodemon",
 		"lint": "npx eslint ./src",
