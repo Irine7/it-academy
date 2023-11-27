@@ -1,7 +1,22 @@
-import { fetchData } from '../model/model.js';
-import { updateStandardText, updateDebounceText } from '../view/view.js';
+import { elements } from '../client/browserUtils.js';
+
+export const handleInput = (e: Event) => {
+	if (e.target instanceof HTMLInputElement) {
+		const inputValue = e.target.value;
+		updateStandardText(inputValue);
+		debounceHandler(inputValue);
+	}
+};
+
+export const updateStandardText = (text: string) => {
+	console.log(`Standard text: ${text}`);
+	if (elements.standardText) {
+		elements.standardText.textContent = text;
+	}
+};
 
 type DebounceFunction<T> = (arg: T) => Promise<void>;
+
 const debounce = <T>(fn: DebounceFunction<T>, ms: number) => {
 	let timer: NodeJS.Timeout;
 
@@ -20,14 +35,8 @@ const debounce = <T>(fn: DebounceFunction<T>, ms: number) => {
 };
 
 const debounceHandler = debounce(async (text: string) => {
-	const result = await fetchData(text);
-	updateDebounceText(result);
-}, 500);
-
-export const handleInput = (e: Event) => {
-	if (e.target instanceof HTMLInputElement) {
-		const inputValue = e.target.value;
-		updateStandardText(inputValue);
-		debounceHandler(inputValue);
+	console.log(`Async text: ${text}`);
+	if (elements.debounceText) {
+		elements.debounceText.textContent = text;
 	}
-};
+}, 500);

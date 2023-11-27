@@ -1,15 +1,14 @@
-import { standardText, debounceText } from '../index.js';
+import { elements } from '../client/browserUtils.js';
 
 const updateStandardText = (text: string) => {
-	// Добавляем проверки на null перед установкой textContent в функциях обновления текста:
-	if (standardText) {
-		standardText.textContent = text;
+	if (elements.standardText) {
+		elements.standardText.textContent = text;
 	}
 };
 
 const updateDebounceText = (text: string) => {
-	if (debounceText) {
-		debounceText.textContent = text;
+	if (elements.debounceText) {
+		elements.debounceText.textContent = text;
 	}
 };
 
