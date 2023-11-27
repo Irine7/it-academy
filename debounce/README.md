@@ -21,6 +21,6 @@ To get started with the project, follow these steps:
 - Build the project: `npm run build`
 - Run the application: `npm start`
 - Run CLI: `npm run start:cli`
-- Run tests: 'npm test`
+- Run tests: `npm test`
 
 Made by: [Irina Semichasova]
