@@ -17,10 +17,10 @@ The project includes a Command Line Interface (CLI) that allows users to interac
 ## Getting Started
 To get started with the project, follow these steps:
 
-- Install dependencies: npm install
-- Build the project: npm run build
-- Run the application: npm start
-- Run npm run start:cli
-- Run tests: npm test
+- Install dependencies: `npm install`
+- Build the project: `npm run build`
+- Run the application: `npm start`
+- Run CLI: `npm run start:cli`
+- Run tests: 'npm test`
 
 Made by: [Irina Semichasova]
