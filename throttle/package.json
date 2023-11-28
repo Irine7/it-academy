@@ -1,0 +1,42 @@
+{
+	"name": "throttle",
+	"version": "1.0.0",
+	"description": "This project introduces a throttle function, a powerful utility designed to control the rate at which a function is invoked. The implementation ensures that the specified function is not called more than once in a given time frame, preventing excessive execution.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "npm run clean && tsc --build tsconfig.json && npm run copy-assets",
+		"clean": "rimraf dist",
+		"copy-assets": "cp -r public/* dist/",
+		"test": "jest --coverage --testEnvironment=node --config=jest.config.js",
+		"start": "node dist/cli/cli.js",
+		"start:dev": "npx ts-node src/index.ts",
+		"start:cli": "npx ts-node src/cli/cli.ts",
+		"dev": "npx nodemon",
+		"lint": "npx eslint ./src",
+		"format": "npx eslint ./src --fix"
+	},
+	"keywords": [],
+	"author": "Irine7",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/inquirer": "^9.0.7",
+		"@types/jest": "^29.5.10",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^20.10.0",
+		"@typescript-eslint/eslint-plugin": "^6.13.0",
+		"@typescript-eslint/parser": "^6.13.0",
+		"eslint": "^8.54.0",
+		"jest": "^29.7.0",
+		"mocha": "^10.2.0",
+		"nodemon": "^3.0.1",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.3.2"
+	},
+	"dependencies": {
+		"inquirer": "^9.2.12",
+		"install": "^0.13.0",
+		"npm": "^10.2.4"
+	}
+}
