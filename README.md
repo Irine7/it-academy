@@ -15,14 +15,12 @@ The memoize folder contains files related to the implementation of a memoization
 ## Navigation
 
 To switch to the `sprint-2` branch, use the following command:
-```bash
-git checkout sprint-2
 
-To navigate between folders in the sprint-2 branch, use the following commands:
+`git checkout sprint-2`
+
+To navigate between folders along the sprint-2 branch, use the following commands:
 
 Move to the parent folder:
-```bash
 `cd ..`
 
-```bash
 `cd folder_name`
