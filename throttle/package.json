@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "npm run clean && tsc --build tsconfig.json && npm run copy-assets",
+		"build:watch": "tsc --build tsconfig.json --watch",
 		"clean": "rimraf dist",
 		"copy-assets": "cp -r public/* dist/",
 		"test": "jest --coverage --testEnvironment=node --config=jest.config.js",
