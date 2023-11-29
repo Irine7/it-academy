@@ -18,7 +18,7 @@ export const updateStandardText = (text: string) => {
 
 type ThrottleFunction<T> = (arg: T) => Promise<void>;
 
-const throttle = <T>(fn: ThrottleFunction<T>, ms: number) => {
+export const throttle = <T>(fn: ThrottleFunction<T>, ms: number) => {
 	let isThrottled = false;
 	let args: T | undefined;
 
