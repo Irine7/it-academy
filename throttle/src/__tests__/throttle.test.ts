@@ -28,51 +28,6 @@ describe('fetchData', () => {
 	});
 });
 
-// describe('throttle', () => {
-//   it('should call the function once after a delay', async () => {
-//     jest.useFakeTimers();
 
-//     const mockFn = jest.fn();
-//     const throttledFn = throttle(mockFn, 3000);
 
-//     // Вызываем функцию throttle дважды
-//     throttledFn('first call');
-//     throttledFn('second call');
-
-//     // Перематываем таймеры на 3000 миллисекунд
-//     jest.advanceTimersByTime(3000);
-
-//     // Дожидаемся завершения асинхронной функции
-//     await Promise.resolve();
-
-//     // Проверяем, что функция была вызвана только один раз
-//     expect(mockFn).toHaveBeenCalledTimes(1);
-
-//     // Проверяем, что функция была вызвана с последним переданным аргументом
-//     expect(mockFn).toHaveBeenCalledWith('second call');
-//   });
-
-//   it('should call the function twice if the delay is exceeded', async () => {
-//     jest.useFakeTimers();
-
-//     const mockFn = jest.fn();
-//     const throttledFn = throttle(mockFn, 3000);
-
-//     // Вызываем функцию throttle дважды
-//     throttledFn('first call');
-//     throttledFn('second call');
-
-//     // Перематываем таймеры на 6000 миллисекунд (превышаем заданное время задержки)
-//     jest.advanceTimersByTime(6000);
-
-//     // Дожидаемся завершения асинхронной функции
-//     await Promise.resolve();
-
-//     // Проверяем, что функция была вызвана дважды
-//     expect(mockFn).toHaveBeenCalledTimes(2);
-
-//     // Проверяем, что функция была вызвана с последним переданным аргументом
-//     expect(mockFn).toHaveBeenCalledWith('second call');
-//   });
-// });
 

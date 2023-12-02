@@ -16,7 +16,7 @@ export const updateStandardText = (text: string) => {
 	}
 };
 
-type ThrottleFunction<T> = (arg: T) => Promise<void>;
+export type ThrottleFunction<T> = (arg: T) => Promise<void>;
 
 export const throttle = <T>(fn: ThrottleFunction<T>, ms: number) => {
 	let isThrottled = false;
@@ -47,7 +47,7 @@ export const throttle = <T>(fn: ThrottleFunction<T>, ms: number) => {
 	};
 };
 
-const throttleHandler = throttle(async (text: string) => {
+export const throttleHandler = throttle(async (text: string) => {
 	console.log(`Async text: ${text}`);
 	if (elements.throttleText) {
 		// Переместим установку текста внутрь setTimeout, чтобы дать время накопиться и проверим на null
