@@ -1,38 +1,35 @@
 import inquirer from 'inquirer';
-import { fetchData } from '../model/model.js';
-import { updateDebounceText } from '../view/view.js';
 
-const debounce = <T>(fn: (arg: T) => Promise<void>, ms: number) => {
-	let timer: NodeJS.Timeout;
+const greeting = 'Hello! Let\'s try the debounce function';
+const farewell = 'Thank you for using CLI. Good bye!';
 
-	return function (this: any, arg: T) {
-		const fnCall = async () => {
-			await fn(arg);
-		};
-		clearTimeout(timer);
-		return new Promise<void>((resolve) => {
-			timer = setTimeout(async () => {
-				await fnCall();
-				resolve();
-			}, ms);
-		});
-	};
-};
-
-const debounceHandler = debounce(async (text: string) => {
-	const result = await fetchData(text);
-	updateDebounceText(result);
-}, 500);
-
-const handleInput = async () => {
-	const userInput = await inquirer.prompt({
+const getUserInput = async () => {
+	const { text } = await inquirer.prompt({
 		type: 'input',
 		name: 'text',
-		message: 'Enter text:',
+		message: 'Enter text for testing throttle:',
 	});
-
-	const inputValue = userInput.text;
-	debounceHandler(inputValue);
+	return text;
 };
 
-handleInput();
+const runDebounceCLI = async () => {
+	console.log(greeting);
+
+	while (true) {
+		const userInput = await getUserInput();
+
+		// Используем debounce для задержки вывода текста
+		const debouncedHandler = async (text: string) => {
+			await new Promise((resolve) => setTimeout(resolve, 3000)); // Задержка вывода Async text
+			console.log(`Async text: ${text}`);
+		};
+
+		// Вызываем debouncedHandler
+		await debouncedHandler(userInput);
+
+		console.log(farewell);
+		break;
+	}
+};
+
+runDebounceCLI();
