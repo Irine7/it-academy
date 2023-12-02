@@ -1,5 +1,4 @@
 import inquirer from 'inquirer';
-import { throttleHandler } from '../controller/controller.js';
 
 const greeting = 'Hello! Let\'s try the throttle function';
 const farewell = 'Thank you for using CLI. Good bye!';
