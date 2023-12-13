@@ -2,8 +2,7 @@
 	"name": "it-academy-sprint-3",
 	"version": "1.0.0",
 	"description": "",
-	"main": "baby-steps.js",
-	"type": "module",
+	"main": "index.js",
 	"directories": {
 		"test": "test"
 	},
