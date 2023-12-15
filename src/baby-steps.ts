@@ -7,11 +7,11 @@
 // console.log(sum);
 
 export const sum = (args: number[]): number => {
-  return args.reduce((acc, curr) => acc + Number(curr), 0);
+	return args.reduce((acc, curr) => acc + Number(curr), 0);
 };
 
 // Для вывода суммы в консоль при вызове из командной строки
 if (require.main === module) {
-  const args = process.argv.slice(2).map(Number);
-  console.log(sum(args));
+	const args = process.argv.slice(2).map(Number);
+	console.log(sum(args));
 }
