@@ -3,7 +3,7 @@
 ####Overview
 Learn You The Node.js (_learnyounode_) is a workshop package for Node.js, providing a series of lessons to teach the fundamentals of writing Node.js applications. The lessons cover a range of topics, starting from basic "HELLO WORLD" exercises and progressing to more advanced concepts like synchronous/asynchronous I/O, filesystem operations, TCP and HTTP networking, events, and streams.
 
-####Installation
+###Installation
 **Prerequisites**
 
 - Node.js should be installed on your machine. If not, download and install it from Node.js official website.
