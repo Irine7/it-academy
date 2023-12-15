@@ -3,19 +3,20 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"type": "commonjs",
 	"directories": {
 		"test": "test"
 	},
 	"scripts": {
-		"dev": "npx nodemon",
+		"dev": "npx nodemon --exec ts-node src/index.ts",
 		"start": "npm run build && node build/index",
-		"build": "rimraf ./build && npx tsc",
+		"build": "rimraf ./build && tsc",
 		"lint": "npx eslint ./src",
 		"format": "npx eslint ./src --fix",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Irine7",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/node": "^20.10.4",
