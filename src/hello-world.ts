@@ -1,2 +1,2 @@
-export const greeting = 'HELLO WORLD';
+export const greeting = 'Hello world';
 console.log(greeting);
