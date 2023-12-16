@@ -21,8 +21,9 @@ Learn You The Node.js (_learnyounode_) is a workshop package for Node.js, provid
 
 ### Project Setup
 
-- Once you have downloaded the repository you should switch to the sprint-3 branch:
-  `git switch sprint-3`
+- Once you have downloaded the repository you should open the folder 'it-academy' and switch to the sprint-3 branch:
+	`cd it-academy`
+  `git checkout sprint-3`
 - Then you will need to download all node modules:
   `npm install`
 - And now you can run the project:
