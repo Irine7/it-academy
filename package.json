@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"type": "commonjs",
 	"directories": {
 		"test": "test"
 	},
@@ -13,18 +12,22 @@
 		"build": "rimraf ./build && tsc",
 		"lint": "npx eslint ./src",
 		"format": "npx eslint ./src --fix",
-		"test": "jest --coverage --testEnvironment=node --config=jest.config.js"
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage"
 	},
 	"keywords": [],
 	"author": "Irine7",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
+		"@types/mock-fs": "^4.13.4",
 		"@types/node": "^20.10.4",
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
 		"@typescript-eslint/parser": "^6.14.0",
 		"eslint": "^8.55.0",
 		"jest": "^29.7.0",
+		"mock-fs": "^5.2.0",
 		"nodemon": "^3.0.2",
 		"rimraf": "^5.0.5",
 		"ts-jest": "^29.1.1",
