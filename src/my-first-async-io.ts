@@ -3,21 +3,34 @@ import * as fs from 'fs';
 // Получаем путь к файлу из аргументов командной строки
 const filePath: string | undefined = process.argv[2];
 
-// Проверяем наличие пути к файлу
-if (!filePath) {
-	console.error('The path not found');
-	process.exit(1);
+// Здесь асинхронно считаем строки
+export function countLines(path: string) {
+	return new Promise((resolve, reject) => {
+		fs.readFile(path, 'utf-8', (error, fileContent) => {
+			if (error) {
+				console.error('Error reading file:', error); // Добавляем вывод ошибки в консоль
+				reject(error.message);
+			} else {
+				const countNewline = fileContent.split('\n').length - 1;
+				resolve(countNewline);
+			}
+		});
+	});
 }
-// Асинхронно читаем содержимое файла
-// NodeJS.ErrnoException - это объект ошибки, который может возникнуть в результате операции чтения файла. Он может содержать информацию о том, почему операция не удалась
-fs.readFile(filePath, 'utf-8', (err: NodeJS.ErrnoException | null, fileContent: string) => {
-	if (err) {
-		console.error(err);
-		return;
+
+const calculateLines = async () => {
+	try {
+		const result = await countLines(filePath);
+		console.log(result);
+	} catch (error) {
+		console.error(`Error processing the file: ${error}`);
 	}
+};
 
-	// Разбиваем содержимое файла на строки и считаем их количество
-	const CountNewline = fileContent.split('\n').length - 1;
-
-	console.log(CountNewline);
-});
+// Проверяем, передан ли путь к файлу в аргументах командной строки
+if (filePath) {
+	calculateLines();
+} else {
+	// Выводим сообщение, если путь к файлу не передан
+	console.error('Please provide the file path in the command line arguments');
+}
