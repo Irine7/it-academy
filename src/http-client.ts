@@ -19,7 +19,7 @@ const request = http.get(url, (response) => {
 
 	// Обрабатываем "error"
 	response.on('error', (error) => {
-		console.error(`Произошла ошибка: ${error.message}`);
+		console.error(`An error has occurred: ${error.message}`);
 	});
 
 	// Обрабатываем "end"
@@ -30,5 +30,7 @@ const request = http.get(url, (response) => {
 
 // Добавляем обработчик ошибки для запроса
 request.on('error', (error) => {
-	console.error(`Произошла ошибка при отправке запроса: ${error.message}`);
+	console.error(
+		`An error occurred while sending the request: ${error.message}`
+	);
 });
