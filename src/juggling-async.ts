@@ -3,7 +3,7 @@ import * as http from 'http';
 const urls = process.argv.slice(2);
 
 // Функция для выполнения асинхронного HTTP GET запроса
-async function fetchData(url: string): Promise<string> {
+export async function fetchData(url: string): Promise<string> {
 	return new Promise((resolve, reject) => {
 		http.get(url, (response) => {
 			let data = '';
@@ -27,7 +27,7 @@ async function fetchData(url: string): Promise<string> {
 }
 
 // Функция для выполнения асинхронных HTTP GET запросов к каждому URL
-async function fetchDataFromAllUrls() {
+export async function fetchDataFromAllUrls() {
 	try {
 		// Массив промисов для выполнения запросов
 		const promises = urls.map((url) => fetchData(url));
@@ -45,4 +45,6 @@ async function fetchDataFromAllUrls() {
 }
 
 // Вызываем функцию для выполнения асинхронных запросов
-fetchDataFromAllUrls();
+if (process.env.USE_FUNC !== 'false') {
+	fetchDataFromAllUrls();
+}
