@@ -2,7 +2,7 @@
 import * as net from 'net';
 
 // Получаем порт из аргументов командной строки
-const port: number = parseInt(process.argv[2], 10);
+const port: number = parseInt(process.argv[2], 10) || 3000;
 
 // Создаем TCP сервер
 const server = net.createServer((socket) => {
@@ -29,6 +29,6 @@ server.listen(port);
 console.log(`TCP was run on: ${port}`);
 
 // Функция для добавления нулей к числу, если оно меньше 10
-function padZero(num: number): string {
+export function padZero(num: number): string {
 	return num < 10 ? `0${num}` : num.toString();
 }
