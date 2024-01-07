@@ -5,5 +5,5 @@ export interface TaskList {
 	addTask(task: Todo): Todo;
 	getTasks(): Todo[];
 	removeTask(id: number): boolean;
-	changeStatus(id: number): Todo;
+	changeStatus(id: number): Todo | null;
 }
