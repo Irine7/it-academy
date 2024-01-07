@@ -1,4 +1,4 @@
-import { Todo } from '../entities/todo';
+import { Todo } from './todo';
 
 // Реализуем новый интерфейс для всех действий для TaskList на основе Todo
 export interface TaskList {
