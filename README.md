@@ -54,5 +54,50 @@ This project follows the Hexagonal Architecture, separating the core business lo
 - Infrastructure Layer: Deals with external concerns, such as databases and web frameworks.
 - Interfaces Layer: Deals with controllers and http.
 
+
+### Layers
+#### Domain
+The Domain layer contains the enterprise logic and types. This layer should not depend on anything outside of itself. This layer typically defines the models and data structures that represent the business entities and concepts.
+
+Examples:
+- Entities
+- Value Objects (immutable objects that represent a single value or concept)
+- Domain Events (something that has happened in the past)
+
+#### Application
+The Application layer contains the business logic and types. This layer is dependent on the Domain layer, but not on anything outside of itself. This layer typically defines the application services that implement the use cases of the system. These services orchestrate the flow of data using the domain entities and types.
+
+The Application layer only depends on abstractions, defined in interfaces, and these interfaces are implemented in outer layers. For example, persistence concerns (such as saving an item to a database) are defined only in terms of requirements; the persistence logic in the Infrastructure layer implements these requirements.
+
+As the Presentation layer is external to Core, the Application layer has no dependency on any presentation concerns.
+
+One example is obtaining information about the HTTP interaction (e.g. the user's ID or other information from an access token). This data is in the HttpContext, which is exposed in the Presentation layer, but not the Application layer. Rather than add a dependency on the Presentation layer, the Application layer can define its abstract requirements in an interface which can be implemented in the Presentation layer.
+
+Examples:
+- Application Services
+- Use Cases/Features
+- DTOs
+
+#### Infrastructure
+The Infrastructure layer is where the external systems are interacted with. For example, you might setup a library to wrap a third party Web API, database, or identity provider. This layer is dependent on the Application Core. This layer defines the implementation of the abstractions defined in the Application layer.
+
+This layer is important for keeping our application clean and testable. For general unit testing this layer is the one that is mocked out the most - therefore interfaces should make sense and be easy to mock.
+
+Examples:
+- Persistence
+- Wrappers for interacting with External APIs
+- Email/SMS
+- Logging
+- Authentication Provider
+
+#### User-Interface (Presentation)
+The User-Interface layer is where the system is interacted with. This might be via a Web API, a GUI, or a CLI.
+
+This layer is dependent on the Application layer & the Infrastructure layer.
+
+The User-Interface layer's sole responsibility is to interface with the means of external interaction and the Application Core. This layer should not contain any business logic, and should not be dependent on any external items.
+
+The most common use case is a Web API - and it's implementation should define the API routes, its input & output models, using HTTP or other web protocols. The API should then call the Application layer, and either return an Application DTO or map to a User-Interface ViewModel if required.
+
 #### Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
