@@ -1,6 +1,7 @@
 import { Todo } from '../../domain/features/todo';
 import { TaskList } from '../../domain/features/taskList';
 
+// функция addTaskFeature создает новую задачу, добавляет её в список с использованием метода addTask объекта TaskList и возвращает добавленную задачу
 export const addTaskFeature = (
 	title: string,
 	completed: boolean,
