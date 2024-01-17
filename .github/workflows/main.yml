@@ -2,25 +2,37 @@ name: CI
 
 on:
   push:
-    branches: [ sprint-4 ]
+    branches:
+      - '**'
   pull_request:
-    branches: [ main ]
-
+    branches:
+      - '**'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '20'
+
+      - name: Get the branch name
+        id: extract_branch
+        run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
+
+      - name: Use the branch name
+        run: echo "The current branch is ${{ steps.extract_branch.outputs.branch }}"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
 
       - name: Run tests
         run: npm run test
