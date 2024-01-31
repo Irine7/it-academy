@@ -355,9 +355,3 @@ WHERE
 fabricante.nombre = 'Asus'
 
 AND producto.precio > (SELECT AVG(precio) FROM producto WHERE codigo_fabricante = fabricante.codigo);
-
-
-
-
-
-
