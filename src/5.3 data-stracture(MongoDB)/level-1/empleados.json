@@ -1,0 +1,8 @@
+{
+	"_id": "ObjectId",
+	"nombre": "String",
+	"telefono": "String",
+	"correo_electronico": "String",
+	"fecha_contratacion": "ISODate",
+	"fecha_venta_gafas": "ISODate"
+}

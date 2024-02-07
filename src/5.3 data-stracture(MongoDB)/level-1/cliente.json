@@ -1,0 +1,10 @@
+{
+	"_id": "ObjectId",
+	"nombre": "String",
+	"direccion_postal": "String",
+	"telefono": "String",
+	"email": "String",
+	"fecha_registro": "ISODate",
+	"recomendado_por": "ObjectId",
+	"ultimas_compras_id": "ObjectId"
+}

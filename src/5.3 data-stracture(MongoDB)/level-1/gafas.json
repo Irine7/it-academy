@@ -1,0 +1,12 @@
+{
+	"_id": "ObjectId",
+	"marca": "String",
+	"graduacion_izquierda": "Number",
+	"graduacion_derecha": "Number",
+	"tipo_montura": "String",
+	"color_montura": "String",
+	"color_vidrio_izquierda": "String",
+	"color_vidrio_derecha": "String",
+	"precio": "Number",
+	"proveedor_id": "ObjectId"
+}
