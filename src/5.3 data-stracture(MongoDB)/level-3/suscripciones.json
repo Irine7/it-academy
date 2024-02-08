@@ -1,0 +1,5 @@
+{
+	"_id": "ObjectId",
+	"usuario_id": "ObjectId",
+	"canal_id": "ObjectId"
+}
