@@ -1,0 +1,12 @@
+{
+	"_id": "ObjectId",
+	"fecha_realizacion": "ISODate",
+	"tipo_entrega": "String",
+	"producto": {
+		"producto_id": "ObjectId",
+		"tipo": "String",
+		"cantidad": "Number"
+	},
+	"precio_total": "Number",
+	"info_adicional": "String"
+}

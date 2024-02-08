@@ -1,0 +1,11 @@
+{
+	"_id": "ObjectId",
+	"nombre": "String",
+	"apellido1": "String",
+	"apellido2": "String",
+	"direccion_postal": "String",
+	"codigo_postal": "String",
+	"localidad": "String",
+	"provincia": "String",
+	"telefono": "String"
+}

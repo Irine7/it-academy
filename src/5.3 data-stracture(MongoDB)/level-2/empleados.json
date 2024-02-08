@@ -1,0 +1,11 @@
+{
+	"_id": "ObjectId",
+	"nombre": "String",
+	"apellido1": "String",
+	"apellido2": "String",
+	"nif": "String",
+	"telefono": "String",
+	"cargo": "String",
+	"tienda_id": "ObjectId",
+	"fecha_entrega": "ISODate"
+}

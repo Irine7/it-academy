@@ -1,0 +1,9 @@
+{
+	"_id": "ObjectId",
+	"tipo_producto": "String",
+	"nombre": "String",
+	"descripcion": "String",
+	"imagen": "String",
+	"precio": "Number",
+	"categoria": "String"
+}
