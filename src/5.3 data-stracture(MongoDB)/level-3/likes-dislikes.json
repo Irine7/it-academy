@@ -1,0 +1,7 @@
+{
+	"_id": "ObjectId",
+	"usuario_id": "ObjectId",
+	"vide_id": "ObjectId",
+	"reaccion": "String",
+	"fecha": "Date"
+}

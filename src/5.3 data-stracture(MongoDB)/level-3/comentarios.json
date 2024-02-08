@@ -1,0 +1,7 @@
+{
+	"_id": "ObjectId",
+	"texto": "String",
+	"fecha_creacion": "Date",
+	"video_id": "ObjectId",
+	"usuario_id": "ObjectId"
+}

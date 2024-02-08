@@ -1,0 +1,18 @@
+{
+	"_id": "ObjectId",
+	"titulo": "String",
+	"descripcion": "String",
+	"tamaño": "String",
+	"nombre_archivo": "String",
+	"duracion": "String",
+	"thumbnail": "String",
+	"reproducciones": "Number",
+	"likes": "Number",
+	"dislikes": "Number",
+	"estado": "String",
+	"etiquetas": "String",
+	"publicado_por": {
+		"usuario_id": "ObjectId",
+		"fecha": "Date"
+	}
+}
