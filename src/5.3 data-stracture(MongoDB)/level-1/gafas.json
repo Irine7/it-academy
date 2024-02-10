@@ -8,5 +8,6 @@
 	"color_vidrio_izquierda": "String",
 	"color_vidrio_derecha": "String",
 	"precio": "Number",
-	"proveedor_id": "ObjectId"
+	"proveedor_id": "ObjectId",
+	"vendido_por_id": "ObjectId"
 }

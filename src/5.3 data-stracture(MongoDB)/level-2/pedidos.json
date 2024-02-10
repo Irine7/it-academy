@@ -8,5 +8,7 @@
 		"cantidad": "Number"
 	},
 	"precio_total": "Number",
-	"info_adicional": "String"
+	"info_adicional": "String",
+	"cliente_id": "ObjectId",
+	"tienda_id": "ObjectId"
 }

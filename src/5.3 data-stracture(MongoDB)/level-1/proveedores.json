@@ -10,6 +10,8 @@
 		"codigo_postal": "String",
 		"pais": "String"
 	},
+	"venta_id": "ObjectId",
+	"fecha_venta": "ISODate",
 	"telefono": "String",
 	"fax": "String",
 	"nif": "String"

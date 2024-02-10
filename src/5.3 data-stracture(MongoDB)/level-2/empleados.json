@@ -6,6 +6,7 @@
 	"nif": "String",
 	"telefono": "String",
 	"cargo": "String",
+	"fecha_entrega": "ISODate",
 	"tienda_id": "ObjectId",
-	"fecha_entrega": "ISODate"
+	"repartidor_id": "ObjectId"
 }
